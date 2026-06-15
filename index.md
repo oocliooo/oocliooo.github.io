@@ -17,4 +17,6 @@ More broadly, my work sits at the intersection of **human-computer interaction**
 
 {% include_relative _includes/publications.md %}
 
+{% include_relative _includes/education.md %}
+
 {% include_relative _includes/contact.md %}
