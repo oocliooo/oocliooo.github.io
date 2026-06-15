@@ -1,7 +1,7 @@
-<h2 id="publications" class="pub-section-title" >Publications <span class="pub-ext-links"><a href="https://scholar.google.com/citations?user=Qi2PSmEAAAAJ" target="_blank">Google Scholar</a><a href="https://dblp.org/pid/12/10033-1.html" target="_blank">DBLP</a></span></h2>
+<h2 id="publications" class="pub-section-title">Publications <span class="pub-ext-links"><a href="{{ site.google_scholar }}" target="_blank">Google Scholar</a></span></h2>
 
+{% if site.data.preprints.main.size > 0 %}
 <h3 class="pub-subsection" style="margin: 30px 0px -30px;">Preprints</h3>
-
 
 <div class="publications">
 <ol class="bibliography">
@@ -10,11 +10,13 @@
 
 <li>
 <div class="pub-row">
+  {% if link.image %}
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
             <abbr class="badge" data-venue="{{ link.conference_short }}">{{ link.conference_short }}</abbr>
   </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  {% endif %}
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;{% unless link.image %}width: 100%;{% endunless %}">
       <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>
@@ -46,16 +48,11 @@
 </div>
 </li>
 
-
 {% endfor %}
 
 </ol>
 </div>
-
-
-
-<h3 class="pub-subsection" style="margin: 35px 0px -30px;">Publications</h3>
-
+{% endif %}
 
 <div class="publications">
 <ol class="bibliography">
@@ -64,11 +61,13 @@
 
 <li>
 <div class="pub-row">
+  {% if link.image %}
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
             <abbr class="badge">{{ link.conference_short }}</abbr>
   </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  {% endif %}
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;{% unless link.image %}width: 100%;{% endunless %}">
       <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>

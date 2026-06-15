@@ -1,42 +1,43 @@
-# Basic Information 
-title: Yaoyao Liu
-position: Assistant Professor
-affiliation: University of Illinois
-affiliation_link: https://www.illinois.edu/
-affiliation_logo: ./assets/img/illinois.svg
-email: lyy (at) illinois.edu
+# ============================================================
+# Sidebar — edit these fields to update the left sidebar
+# ============================================================
 
-# Search Engine Optimization (SEO)
-keywords: yaoyao liu, liu yaoyao, yaoyaoliu, liuyaoyao
-canonical: https://yaoyaoliu.web.illinois.edu
-description: Yaoyao Liu is an assistant professor at the University of Illinois Urbana-Champaign. His research lies in meta-learning, incremental learning, and image generation.
+# Name
+title: Danxuan Liang (Clio)
+# Title / position
+position: MPhil Student
 
-# The option is used to enable the Illinois template.
-enable_hopkins_logo: true
+# School
+affiliation: HKUST
+affiliation_link: https://www.ust.hk/
 
-# The option is used to show the last update time.
+# Email (use " (at) " instead of @ to reduce spam)
+email: dliangac (at) connect.ust.hk
+
+# Avatar: upload your photo to assets/img/avatar.jpg (or .png),
+# then uncomment the line below.
+avatar: ./assets/img/avatar.jpg
+favicon: ./assets/img/fufu.PNG
+welcome_icon: ./assets/img/fufu.PNG
+welcome_message: Welcome!
+
+# Social icon links (Google Scholar, GitHub, LinkedIn)
+link_type: icon
+google_scholar: https://scholar.google.com/citations?user=bb1ZeycAAAAJ&hl=en&inst=1381320739207392350&oi=ao
+github_link: https://github.com/oocliooo
+linkedin: https://www.linkedin.com/in/danxuan-liang-886273246/
+
+# ============================================================
+# SEO & site settings
+# ============================================================
+
+keywords: danxuan liang, liang danxuan, VR, XR, HCI, human-computer interaction
+canonical: https://oocliooo.github.io
+description: Danxuan Liang is an MPhil student in Computer Science and Engineering at HKUST. Her research focuses on VR/XR, LLM, interactive system design, and human-computer interaction.
+
+enable_hopkins_logo: false
 enable_last_update: false
 
-# Links
-link_type: icon #text/icon
-google_scholar: https://scholar.google.com/citations?user=Qi2PSmEAAAAJ
-github_link: https://github.com/yaoyao-liu/
-linkedin: https://www.linkedin.com/in/liuyaoyao/
-twitter: https://twitter.com/YaoyaoLiu1/
-
-# Images 
-avatar: https://img.yliu.me/yaoyaoliu.jpg
-
-# Footnotes
-footnote: Feel free to use my website's source code.
-footnote_link: https://github.com/yaoyao-liu/minimal-light
-
-# Analytics
-# Please remove the following lines about analytics services if you fork my project. 
-# Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.
-clustrmaps_id: HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY
-
-# The following files will be removed from the generated website.
 exclude:
   - build.sh
   - Gemfile

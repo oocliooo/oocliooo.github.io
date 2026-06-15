@@ -1,9 +1,9 @@
 <h2 style="margin: 60px 0px 10px;">Contact</h2>
 
-614 E. Daniel St. MC-314
+Hong Kong University of Science and Technology
 <br />
-Champaign, IL 61820-7999
+Clear Water Bay, Hong Kong
 <br />
-Phone: <a href="tel:+12173000910">217-300-0910</a>
+Email: <a href="mailto:dliangac@connect.ust.hk">dliangac@connect.ust.hk</a>
 <br />
-Office: <a href="https://maps.app.goo.gl/xvHRWG27wSZXQ1Cv7">5125</a>
+Phone: <a href="tel:+85296106662">+852 9610 6662</a>

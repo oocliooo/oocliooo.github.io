@@ -4,20 +4,17 @@ layout: homepage
 
 <h1 id="about-me"></h1>
 
-<h2 style="margin: 80px 0px 10px;"></h2>
+I am an MPhil student in [Computer Science and Engineering](https://cse.hkust.edu.hk/) at the [Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/), supervised by [Professor Huamin QU](https://cse.hkust.edu.hk/~huamin/). I received my BEng in Computer Science with Extended Major in Artificial Intelligence from HKUST in 2025.
 
-I am an Assistant Professor in the [School of Information Sciences](https://ischool.illinois.edu/) and the [Coordinated Science Laboratory](https://csl.illinois.edu/) at the [University of Illinois Urbana-Champaign](https://www.illinois.edu/). I am also affiliated with the [Siebel School of Computing and Data Science](https://cs.illinois.edu/) (formerly the Department of Computer Science) and the [Department of Electrical & Computer Engineering](https://ece.illinois.edu/).
+My research focuses on **VR/XR** immersive systems, with two main directions:
 
-Previously, I received my Ph.D. in Computer Science at [Max Planck Institute for Informatics](https://www.mpi-inf.mpg.de/) and my B.S. in Electronic Information Engineering at [Tianjin University](https://en.tju.edu.cn/). I also spent time at [Johns Hopkins](https://ccvl.jhu.edu/), [Oxford VGG](https://www.robots.ox.ac.uk/~vgg/), and [National University of Singapore](https://www.comp.nus.edu.sg/). 
+- **VR for education:** I study how teachers can use **LLMs** to support **3D pedagogical annotation** in VR classrooms, helping them express and scaffold instructional ideas in three-dimensional teaching environments. I am also interested in how such tools can enable richer **teaching interactions** in VR.
+- **VR for immersive experiences:** I explore design opportunities in **VR concerts** and similar immersive settings, investigating what elements can strengthen presence and audience engagement.
 
-My research lies at the intersection of **computer vision** and **machine learning**, with a special focus on building intelligent visual systems that are continual and data-efficient. My research interests include **continual learning**, **few-shot learning**, **semi-supervised learning**, **generative models**, **3D geometry models**, and **medical image analysis**.
-
-
-<div style="border-left: 4px solid #FF5F05; padding: 10px 16px; background-color: #fafafa; color: #333; border-radius: 0 4px 4px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.07);">
-<strong style="color:#c0392b;">For prospective students: If you are interested in working with me, please see details <a href="https://vision.ischool.illinois.edu/openings/">here</a>.</strong>
-</div>
-
+More broadly, my work sits at the intersection of **human-computer interaction**, **interactive system design**, and **AI-assisted immersive media**.
 
 {% include_relative _includes/news.md %}
+
+{% include_relative _includes/publications.md %}
 
 {% include_relative _includes/contact.md %}
