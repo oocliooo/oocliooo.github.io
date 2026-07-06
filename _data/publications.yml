@@ -3,6 +3,7 @@ main:
   - title: "From Human Pragmatic Language Skills to Conversational Agent Design: A Systematic Review of Transfer Strategies"
     authors: J Hu, X Yao, Z Huang, <strong>Danxuan Liang</strong>, D Yang, D Liu, J Li, Y Zhang, X Ma
     conference_short: CHI
+    year: 2026
     conference: ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2026.
     pdf: https://doi.org/10.1145/3772318.3792787
     image: ./assets/img/publications/chi2026.jpg
@@ -10,6 +11,7 @@ main:
   - title: "Designing Scaffolding Strategies for Conversational Agents in Dialog Task of Neurocognitive Disorders Screening"
     authors: J Hu, J Li, Y Zeng, D Yang, <strong>Danxuan Liang</strong>, H Meng, X Ma
     conference_short: CHI
+    year: 2024
     conference: ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
     pdf: https://doi.org/10.1145/3613904.3642960
     image: ./assets/img/publications/chi2024.jpg

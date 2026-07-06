@@ -13,7 +13,7 @@
   {% if link.image %}
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
-            <abbr class="badge" data-venue="{{ link.conference_short }}">{{ link.conference_short }}</abbr>
+            <abbr class="badge" data-venue="{{ link.conference_short }}">{{ link.conference_short }}{% if link.year %} {{ link.year }}{% endif %}</abbr>
   </div>
   {% endif %}
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;{% unless link.image %}width: 100%;{% endunless %}">
@@ -64,7 +64,7 @@
   {% if link.image %}
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
-            <abbr class="badge">{{ link.conference_short }}</abbr>
+            <abbr class="badge">{{ link.conference_short }}{% if link.year %} {{ link.year }}{% endif %}</abbr>
   </div>
   {% endif %}
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;{% unless link.image %}width: 100%;{% endunless %}">
