@@ -1,4 +1,4 @@
-<h2 style="margin: 60px 0px 10px;">Contact</h2>
+<h2 id="contact" style="margin: 60px 0px 10px;">Contact</h2>
 
 Hong Kong University of Science and Technology
 <br />

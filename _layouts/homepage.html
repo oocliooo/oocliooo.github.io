@@ -35,9 +35,19 @@
   </head>
   <body>
 
-    <div class="welcome-bar" aria-label="Welcome message">
-      <img src="{{ site.welcome_icon | default: site.favicon | relative_url }}" alt="" aria-hidden="true" />
-      <span class="typewriter-text" id="typewriter-text"></span><span class="typewriter-cursor" aria-hidden="true">▌</span>
+    <div class="top-bar">
+      <div class="welcome-bar" aria-label="Welcome message">
+        <img src="{{ site.welcome_icon | default: site.favicon | relative_url }}" alt="" aria-hidden="true" />
+        <span class="typewriter-text" id="typewriter-text"></span><span class="typewriter-cursor" aria-hidden="true">▌</span>
+      </div>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#about-me" data-target="about-me">Home</a>
+        <a href="#publications" data-target="publications">Publications</a>
+        <a href="#projects" data-target="projects">Projects</a>
+        <a href="#education" data-target="education">Education</a>
+        <a href="#teaching" data-target="teaching">Teaching</a>
+        <a href="#contact" data-target="contact">Contact</a>
+      </nav>
     </div>
 
     <style>
@@ -65,11 +75,62 @@
       header br {
         display: none;
       }
-      .welcome-bar {
+      .top-bar {
         position: fixed;
-        top: 10px;
-        left: 10px;
+        top: 0;
+        left: 0;
+        right: 0;
         z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.86);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        transition: box-shadow 0.25s ease;
+      }
+      .top-bar.scrolled {
+        box-shadow: 0 1px 10px rgba(19, 41, 75, 0.10);
+      }
+      .site-nav {
+        display: flex;
+        gap: 2px;
+        font-family: "Crimson Pro", serif;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .site-nav a {
+        position: relative;
+        color: #13294B;
+        padding: 4px 10px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .site-nav a:hover {
+        background-color: #eef1f6;
+        color: #13294B;
+      }
+      .site-nav a.active {
+        background-color: #13294B;
+        color: #fff;
+      }
+      section h2[id], section h1[id] {
+        scroll-margin-top: 64px;
+      }
+      /* Leave room below the fixed top bar */
+      @media screen and (min-width: 961px) {
+        section { padding-top: 64px; }
+        header { padding-top: 72px; }
+      }
+      @media screen and (max-width: 720px) {
+        .top-bar { flex-direction: column; align-items: flex-start; gap: 4px; padding: 6px 10px; }
+        .site-nav { width: 100%; overflow-x: auto; font-size: 14px; }
+        .site-nav a { padding: 3px 8px; white-space: nowrap; }
+        section h2[id], section h1[id] { scroll-margin-top: 84px; }
+      }
+      .welcome-bar {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -112,6 +173,61 @@
         width: 45%;
         max-width: 100%;
         margin: 0 auto;
+      }
+      .life-gallery {
+        width: 100%;
+        margin: 0 0 0.4em;
+      }
+      .gallery-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #f4f6f8;
+        box-shadow: 0 6px 20px rgba(19, 41, 75, 0.18);
+      }
+      .gallery-slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.06);
+        transition: opacity 0.9s ease, transform 4.5s ease;
+      }
+      .gallery-slide.active {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .gallery-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .gallery-dots span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #c8d0dc;
+        transition: background-color 0.3s ease, width 0.3s ease;
+      }
+      .gallery-dots span.active {
+        width: 16px;
+        border-radius: 3px;
+        background: #13294B;
+      }
+      .life-gallery figcaption {
+        margin-top: 6px;
+        font-size: 13px;
+        font-style: italic;
+        color: #6b7686;
+      }
+      @media print, screen and (max-width: 960px) {
+        .life-gallery { width: 200px; margin: 0 auto 0.4em; }
+        header { padding-top: 90px !important; }
       }
       header h1 {
         width: 100%;
@@ -187,13 +303,27 @@
     <div class="wrapper">
       <header>
         
-        <a class="image avatar">
-        {% if site.avatar %}
-          <img src="{{ site.avatar }}" alt="avatar" />
-        {% else %}
-          <span class="avatar-placeholder" aria-hidden="true"></span>
-        {% endif %}
-        </a>
+        {% comment %} Photos: drop any image into assets/img/gallery/ — they play in filename order. {% endcomment %}
+        {% assign gallery_exts = ".jpg,.jpeg,.png,.gif,.webp,.JPG,.JPEG,.PNG,.GIF,.WEBP" | split: "," %}
+        {% assign gallery = site.static_files | where_exp: "f", "f.path contains '/assets/img/gallery/'" | sort: "path" %}
+        <figure class="life-gallery">
+          <div class="gallery-frame" id="life-gallery">
+          {% assign shown = 0 %}
+          {% for photo in gallery %}
+            {% if gallery_exts contains photo.extname %}
+            <img src=".{{ photo.path | uri_escape }}" alt="A photo from my life" class="gallery-slide{% if shown == 0 %} active{% endif %}" {% if shown > 0 %}loading="lazy"{% endif %} />
+            {% assign shown = shown | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if shown == 0 and site.avatar %}
+            <img src="{{ site.avatar }}" alt="avatar" class="gallery-slide active" />
+          {% endif %}
+          </div>
+          {% if shown > 1 %}
+          <div class="gallery-dots" id="gallery-dots" aria-hidden="true"></div>
+          {% endif %}
+          <figcaption>My life &amp; my baby puppy</figcaption>
+        </figure>
 
         <h1>{{ site.title }}</h1>
 
@@ -307,6 +437,116 @@
           }
         }
         type();
+      })();
+
+      // Photo gallery: crossfade through assets/img/gallery/ images
+      (function () {
+        var slides = document.querySelectorAll('#life-gallery .gallery-slide');
+        var dotsEl = document.getElementById('gallery-dots');
+        if (slides.length < 2) return;
+        var dots = [];
+        slides.forEach(function () {
+          var d = document.createElement('span');
+          dotsEl.appendChild(d);
+          dots.push(d);
+        });
+        var i = 0;
+        dots[0].classList.add('active');
+        setInterval(function () {
+          slides[i].classList.remove('active');
+          dots[i].classList.remove('active');
+          i = (i + 1) % slides.length;
+          slides[i].classList.add('active');
+          dots[i].classList.add('active');
+        }, 4000);
+      })();
+
+      // Project videos: play on hover, show cover otherwise
+      (function () {
+        var items = document.querySelectorAll('.projects li');
+        // Start downloading a project's video once its card is near the viewport
+        var preloader = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var v = e.target.querySelector('.project-video');
+            if (v) v.preload = 'auto';
+            preloader.unobserve(e.target);
+          });
+        }, { rootMargin: '300px 0px' }) : null;
+
+        items.forEach(function (li) {
+          var video = li.querySelector('.project-video');
+          if (!video) return;
+          video.muted = true;
+          if (preloader) preloader.observe(li);
+          // Hide the cover only once frames are actually moving
+          video.addEventListener('playing', function () {
+            if (li.classList.contains('playing')) li.classList.add('video-on');
+          });
+          var watchdog = null;
+          function start() {
+            var p = video.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+          li.addEventListener('mouseenter', function () {
+            li.classList.add('playing');
+            start();
+            // If the decoder stalls on the first frame, reload once and retry
+            clearTimeout(watchdog);
+            watchdog = setTimeout(function () {
+              if (li.classList.contains('playing') && !li.classList.contains('video-on')) {
+                video.load();
+                start();
+              }
+            }, 1500);
+          });
+          li.addEventListener('mouseleave', function () {
+            clearTimeout(watchdog);
+            li.classList.remove('playing', 'video-on');
+            video.pause();
+            if (video.currentTime > 0) video.currentTime = 0;
+          });
+        });
+      })();
+
+      // Scroll reveal + active nav highlighting
+      (function () {
+        var bar = document.querySelector('.top-bar');
+        window.addEventListener('scroll', function () {
+          bar.classList.toggle('scrolled', window.scrollY > 8);
+        }, { passive: true });
+
+        if (!('IntersectionObserver' in window)) return;
+
+        var targets = document.querySelectorAll('section > h2, section > p, section > ul, section > .status-banner, .publications ol.bibliography > li');
+        var revealer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              revealer.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        targets.forEach(function (el) {
+          el.classList.add('reveal');
+          revealer.observe(el);
+        });
+
+        var links = document.querySelectorAll('.site-nav a');
+        var ids = Array.prototype.map.call(links, function (a) { return a.getAttribute('data-target'); });
+        function updateActive() {
+          var current = ids[0];
+          ids.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el && el.getBoundingClientRect().top < window.innerHeight * 0.35) current = id;
+          });
+          if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = ids[ids.length - 1];
+          links.forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('data-target') === current);
+          });
+        }
+        window.addEventListener('scroll', updateActive, { passive: true });
+        updateActive();
       })();
     </script>
   </body>

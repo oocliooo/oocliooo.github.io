@@ -1,4 +1,4 @@
-<h2 style="margin: 60px 0px 10px;">Education</h2>
+<h2 id="education" style="margin: 60px 0px 10px;">Education</h2>
 
 <ul>
 <li><strong>MPhil in Computer Science and Engineering</strong>, <a href="https://www.ust.hk/">Hong Kong University of Science and Technology (HKUST)</a><br />

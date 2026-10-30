@@ -1,0 +1,17 @@
+main:
+
+  - title: "LumiNote: LLM-Assisted Multimodal Instruction for VR Stage Lighting Education"
+    role: Project Leader
+    collaboration: with <a href="https://wtong2017.github.io/">Prof. Wai Tong</a>, VVAI Lab, Texas A&amp;M University
+    period: 2024 – Present
+    description: An LLM-assisted Unity VR system that turns instructors' gestures and speech into live spatial annotations and 3D lighting scene actions.
+    image: ./assets/img/projects/luminote.jpg
+    video: ./assets/videos/luminote.mp4?v=2
+
+  - title: "GAVIS: Global Englishes AI-assisted Virtual Reality Interactive System"
+    role: VR Developer
+    collaboration: VisLab, HKUST · Funded by the Quality Education Fund
+    period: 2025 – Present
+    description: An AI-assisted VR application for English oral practice, with real-time body and hand tracking to evaluate non-verbal expression.
+    image: ./assets/img/projects/gavis.jpg
+    video: ./assets/videos/gavis.mp4?v=2

@@ -4,10 +4,14 @@ layout: homepage
 
 <h1 id="about-me"></h1>
 
-I am an MPhil student in [Computer Science and Engineering](https://cse.hkust.edu.hk/) at the [Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/), supervised by [Professor Huamin QU](https://cse.hkust.edu.hk/~huamin/). I received my BEng in Computer Science with Extended Major in Artificial Intelligence from HKUST in 2025. 
+I am an MPhil student in [Computer Science and Engineering](https://cse.hkust.edu.hk/) at the [Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/), supervised by [Professor Huamin QU](https://cse.hkust.edu.hk/~huamin/). My research interests center on VR/XR immersive systems, human-centered AI, and human-AI collaboration, with applications across domains such as education, elderly care, and immersive experience design. More specifically, I study how people use, rely on, and calibrate their trust in LLM-based systems when making decisions in specialized domains.
 
+Alongside my MPhil, I have been a remote Research Intern at the VVAI Lab at [Texas A&M University](https://www.tamu.edu/), working with [Professor Wai Tong](https://wtong2017.github.io/) on LLM-assisted VR systems for stage-lighting education. I was formerly an Undergraduate Researcher with [Professor Xiaojuan MA](https://www.cse.ust.hk/~mxj/) at HKUST. As a developer and designer, my background spans VR/XR development, LLM-powered systems, and user-centered interaction design. During breaks, I enjoy traveling, watching films and playing the piano.
 
-My research interests center on VR/XR immersive systems, human-centered AI, and human-AI collaboration, with applications across domains such as education, elderly care, and immersive experience design.
+<div class="status-banner" role="note">
+  <span class="status-dot" aria-hidden="true"></span>
+  <span><strong>Open to opportunities:</strong> I am actively looking for <strong>full-time positions</strong> and <strong>PhD positions</strong> starting in <strong>Fall 2027</strong>. Feel free to <a href="#contact">reach out</a>!</span>
+</div>
 
 
 <!-- <p style="margin:-8px 0 22px;padding:7px 12px;border-left:3px solid #13294B;background:#f5f7fa;color:#34445c;font-size:0.98em;line-height:1.45;">I am currently on the job market and seeking positions starting in Fall 2027, while also actively exploring PhD opportunities.</p> -->
@@ -23,6 +27,10 @@ More broadly, my work sits at the intersection of **human-computer interaction**
 
 {% include_relative _includes/publications.md %}
 
+{% include_relative _includes/projects.md %}
+
 {% include_relative _includes/education.md %}
+
+{% include_relative _includes/teaching.md %}
 
 {% include_relative _includes/contact.md %}
