@@ -1,17 +1,24 @@
 main:
 
+  - title: "StageComposer: Exploring Audience-Orchestrated Stage Effects in VR Concerts via Light Stick Motions"
+    role: Project Leader
+    period: 2026 Jul – Present
+    description: StageComposer is an interactive, single-viewer VR concert system that translates audience virtual light stick motions into real-time, adaptive stage effects to create a highly immersive and personalized concert-watching experience.
+    image: ./assets/img/projects/stagecomposer.jpg
+    video: ./assets/videos/stagecomposer.mp4?v=2
+  
   - title: "LumiNote: LLM-Assisted Multimodal Instruction for VR Stage Lighting Education"
     role: Project Leader
     collaboration: with <a href="https://wtong2017.github.io/">Prof. Wai Tong</a>, VVAI Lab, Texas A&amp;M University
-    period: 2024 – Present
-    description: An LLM-assisted Unity VR system that turns instructors' gestures and speech into live spatial annotations and 3D lighting scene actions.
+    period: 2024 Sep – Present
+    description: An LLM-assisted Unity VR system for stage lighting instructors that translates real-time teaching intent (expressed through speech and gestures) into live spatial annotations and 3D lighting actions for rapid instructional content creation.
     image: ./assets/img/projects/luminote.jpg
     video: ./assets/videos/luminote.mp4?v=2
 
   - title: "GAVIS: Global Englishes AI-assisted Virtual Reality Interactive System"
     role: VR Developer
     collaboration: VisLab, HKUST · Funded by the Quality Education Fund
-    period: 2025 – Present
-    description: An AI-assisted VR application for English oral practice, with real-time body and hand tracking to evaluate non-verbal expression.
+    period: 2025 Jul – 2026 Nov
+    description: An AI-assisted VR application for English oral practice that provides AI peers with distinct personalities to achieve adaptive difficulty levels, while offering LLM-driven verbal feedback and non-verbal performance evaluations via real-time body and hand tracking.
     image: ./assets/img/projects/gavis.jpg
     video: ./assets/videos/gavis.mp4?v=2

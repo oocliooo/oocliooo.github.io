@@ -4,9 +4,9 @@ layout: homepage
 
 <h1 id="about-me"></h1>
 
-I am an MPhil student in [Computer Science and Engineering](https://cse.hkust.edu.hk/) at the [Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/), supervised by [Professor Huamin QU](https://cse.hkust.edu.hk/~huamin/). My research interests center on VR/XR immersive systems, human-centered AI, and human-AI collaboration, with applications across domains such as education, elderly care, and immersive experience design.
+I am an MPhil student in [Computer Science and Engineering](https://cse.hkust.edu.hk/) at the [Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/), supervised by [Professor Huamin QU](https://cse.hkust.edu.hk/~huamin/). My research interests lie in the area of VR/XR, Human-Centered AI, and Human–Computer Interaction. Specifically, I focus on integrating AI into intelligent system design to create more natural, context-aware digital partners that help humans with immersive learning, live entertainment, and healthy aging.
 
-Alongside my MPhil, I have been a remote Research Intern at the VVAI Lab at [Texas A&M University](https://www.tamu.edu/), working with [Professor Wai Tong](https://wtong2017.github.io/) on LLM-assisted VR systems for stage-lighting education. I was formerly an Undergraduate Researcher with [Professor Xiaojuan MA](https://www.cse.ust.hk/~mxj/) at HKUST. As a developer and designer, my background spans VR/XR development, LLM-powered systems, and user-centered interaction design. During breaks, I enjoy traveling, watching films and playing the piano.
+Alongside my MPhil, I have been a remote Research Intern at the VVAI Lab at [Texas A&M University](https://www.tamu.edu/), working with [Professor Wai Tong](https://wtong2017.github.io/) on LLM-assisted VR systems for stage-lighting education. I was formerly an Undergraduate Researcher with [Professor Xiaojuan MA](https://www.cse.ust.hk/~mxj/) at HKUST. As a developer and designer, my background spans VR/XR development, LLM-powered systems, and user-centered interaction design. In my free time, I enjoy travelling 🌄, music 🎹 and food 🍲.
 
 <div class="status-banner" role="note">
   <span class="status-dot" aria-hidden="true"></span>
