@@ -1,7 +1,14 @@
 main:
+  - title: "LumiNote: LLM-Assisted Multimodal Instruction for VR Stage Lighting Education"
+    authors: <strong>D Liang</strong>, C Li, Z Wei, X Xu, M Xia, H Qu, W Tong
+    conference_short: Under Review
+    # year: 2026
+    conference: Under Review.
+    pdf: https://arxiv.org/abs/2609.17335
+    image: ./assets/img/publications/luminote.png
 
   - title: "From Human Pragmatic Language Skills to Conversational Agent Design: A Systematic Review of Transfer Strategies"
-    authors: J Hu, X Yao, Z Huang, <strong>Danxuan Liang</strong>, D Yang, D Liu, J Li, Y Zhang, X Ma
+    authors: J Hu, X Yao, Z Huang, <strong>D Liang</strong>, D Yang, D Liu, J Li, Y Zhang, X Ma
     conference_short: CHI
     year: 2026
     conference: ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2026.
@@ -9,7 +16,7 @@ main:
     image: ./assets/img/publications/chi2026.jpg
 
   - title: "Designing Scaffolding Strategies for Conversational Agents in Dialog Task of Neurocognitive Disorders Screening"
-    authors: J Hu, J Li, Y Zeng, D Yang, <strong>Danxuan Liang</strong>, H Meng, X Ma
+    authors: J Hu, J Li, Y Zeng, D Yang, <strong>D Liang</strong>, H Meng, X Ma
     conference_short: CHI
     year: 2024
     conference: ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.

@@ -1,4 +1,36 @@
 main:
+  - title: "GAVIS: Global Englishes AI-assisted Virtual Reality Interactive System"
+    role: VR Developer
+    collaboration: <a href="https://vis.cse.ust.hk/">VisLab</a>, HKUST
+    period: 2025 Jul – 2026 Nov
+    description: An AI-assisted VR application for English oral practice. Funded by Hong Kong's Quality Education Fund (HKD 30M in total, HKD 9M to our lab), with my part of the work accounting for roughly HKD 2M.
+    contributions:
+      - "Built Unity VR scenes and frontend logic, including UI/UX, avatar animation and speech modules, and integrated these components with backend services."
+      - "Implemented in-VR gesture detection logic to evaluate learners’ non-verbal behaviour."
+    image: ./assets/img/projects/gavis.jpg
+    video: ./assets/videos/gavis.mp4?v=2
+
+# contributions: optional list of what I was responsible for
+  - title: "LLM-Assisted Multimodal Instruction for VR Stage Lighting Education"
+    role: Project Leader
+    collaboration: with <a href="https://wtong2017.github.io/">Prof. Wai Tong</a>, VVAI Lab, Texas A&amp;M University
+    period: 2024 Sep – 2026 Apr
+    description: An LLM-assisted Unity VR system for stage lighting instructors that translates real-time teaching intent (expressed through speech and gestures) into live spatial annotations and 3D lighting actions for rapid instructional content creation. Funded by the HKUST Media Technology &amp; Publishing Center (HKD 10K) for use in HKUST's <em>EMIA 2500A The Technical Theater Arts</em> course.
+    contributions:
+      - "Built the multimodal pipeline that captures instructors' speech and gestures and uses an LLM to turn them into spatial annotations and 3D lighting scene actions."
+    image: ./assets/img/projects/luminote.jpg
+    video: ./assets/videos/luminote.mp4?v=2
+
+  - title: "Learning Sustainability in a Game-Based Metaverse Environment"
+    role: Game Designer & Full-Stack Developer
+    period: 2022 Jan – 2022 Sep
+    collaboration: with <a href="https://scholars.ln.edu.hk/en/persons/pui-yun-paulina-wong/">Prof. Paulina Wong</a>, Lingnan University
+    description: A story-based metaverse learning environment built in Unity 3D, in which students learn ESG and Sustainability practices by playing through an interactive narrative. A funded project with a total budget of HKD 1M.
+    contributions:
+      - "Responsible for full-stack development: Unity 3D story-based scenes, gameplay and learning logic, and the backend services."
+    image: ./assets/img/projects/sustainability.png
+    video: ./assets/videos/sustainability.mov?v=2
+
 
   - title: "StageComposer: Exploring Audience-Orchestrated Stage Effects in VR Concerts via Light Stick Motions"
     role: Project Leader
@@ -6,19 +38,5 @@ main:
     description: StageComposer is an interactive, single-viewer VR concert system that translates audience virtual light stick motions into real-time, adaptive stage effects to create a highly immersive and personalized concert-watching experience.
     image: ./assets/img/projects/stagecomposer.jpg
     video: ./assets/videos/stagecomposer.mp4?v=2
-  
-  - title: "LumiNote: LLM-Assisted Multimodal Instruction for VR Stage Lighting Education"
-    role: Project Leader
-    collaboration: with <a href="https://wtong2017.github.io/">Prof. Wai Tong</a>, VVAI Lab, Texas A&amp;M University
-    period: 2024 Sep – Present
-    description: An LLM-assisted Unity VR system for stage lighting instructors that translates real-time teaching intent (expressed through speech and gestures) into live spatial annotations and 3D lighting actions for rapid instructional content creation.
-    image: ./assets/img/projects/luminote.jpg
-    video: ./assets/videos/luminote.mp4?v=2
 
-  - title: "GAVIS: Global Englishes AI-assisted Virtual Reality Interactive System"
-    role: VR Developer
-    collaboration: VisLab, HKUST · Funded by the Quality Education Fund
-    period: 2025 Jul – 2026 Nov
-    description: An AI-assisted VR application for English oral practice that provides AI peers with distinct personalities to achieve adaptive difficulty levels, while offering LLM-driven verbal feedback and non-verbal performance evaluations via real-time body and hand tracking.
-    image: ./assets/img/projects/gavis.jpg
-    video: ./assets/videos/gavis.mp4?v=2
+  

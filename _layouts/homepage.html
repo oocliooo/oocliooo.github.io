@@ -52,15 +52,17 @@
 
     <style>
       :root {
-        --sidebar-width: 200px;
-        --content-width: 727px;
+        --sidebar-width: 210px;
+        --page-width: 1140px;
+        --column-gap: 48px;
       }
+      .wrapper { width: min(var(--page-width), calc(100% - 32px)); }
       header {
         padding-top: 3em;
         width: var(--sidebar-width);
         box-sizing: border-box;
         float: none;
-        left: max(0px, calc(50% - 480px));
+        left: max(16px, calc(50% - var(--page-width) / 2));
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,7 +70,7 @@
         gap: 0.35rem;
       }
       footer { width: var(--sidebar-width); }
-      section { width: var(--content-width); }
+      section { width: calc(100% - var(--sidebar-width) - var(--column-gap)); }
       header > * {
         max-width: 100%;
       }
